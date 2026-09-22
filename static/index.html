@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QA Bot</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Simple Question-Answering Bot</h1>
+      <p>Ask a question from the training set and see what the model predicts.</p>
+    </header>
+
+    <main id="chat" class="chat"></main>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        type="text"
+        id="question-input"
+        placeholder="e.g. What is the capital of France?"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="send-btn">Ask</button>
+    </form>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
