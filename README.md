@@ -154,7 +154,7 @@ If confidence is low, a `difflib`-based closest-question search over the dataset
 ## 🚀 Getting Started
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/zakir-maswani/Question-Answering-Bot-LSTM/tree/main
 cd question-answering-bot-lstm
 pip install -r requirements.txt
 uvicorn main:app --reload
