@@ -53,19 +53,19 @@ When the model isn't confident, a fuzzy string-matching fallback (`difflib`) cat
 <tr>
 <td width="33%" valign="top">
 
-### 🔤 Full ML Pipeline
+### Full ML Pipeline
 Tokenization, vocabulary building, `Dataset`/`DataLoader`, and training loop — all documented in one notebook.
 
 </td>
 <td width="33%" valign="top">
 
-### 🧬 LSTM Classifier
+### LSTM Classifier
 Sequence encoder with dropout regularization, trained to classify questions into known answers.
 
 </td>
 <td width="33%" valign="top">
 
-### 🎯 Full-Data Training
+### Full-Data Training
 Trains on the entire dataset for deployment, so every known question is correctly recognized.
 
 </td>
@@ -73,19 +73,19 @@ Trains on the entire dataset for deployment, so every known question is correctl
 <tr>
 <td width="33%" valign="top">
 
-### 🔍 Fuzzy Fallback
+### Fuzzy Fallback
 `difflib`-based closest-match search catches reworded questions the model isn't confident about.
 
 </td>
 <td width="33%" valign="top">
 
-### ⚡ FastAPI Backend
+### FastAPI Backend
 REST API with a `/predict` endpoint and auto-generated interactive docs at `/docs`.
 
 </td>
 <td width="33%" valign="top">
 
-### 🎨 Lightweight Frontend
+### Lightweight Frontend
 Zero-dependency HTML/CSS/JS chat UI — no frameworks, no build step.
 
 </td>
@@ -110,14 +110,20 @@ Zero-dependency HTML/CSS/JS chat UI — no frameworks, no build step.
 
 ```
 question-answering-bot-lstm/
-├── notebook.ipynb          # Training pipeline: EDA → vocab → model → training → export
-├── main.py                 # FastAPI app: loads model, serves /predict + frontend
+├── data_preprocessing_and_model_training.ipynb         
+├── main.py                 
 ├── requirements.txt
 ├── model/
-│   ├── qa_model.pth          # Trained LSTM weights
-│   ├── vocab.pkl              # Word-level vocabulary
-│   ├── answer_vocab.pkl       # Answer-class vocabulary
-│   └── qa_dataset.csv         # Used by the fuzzy fallback
+│   ├── qa_model.pth          
+│   ├── vocab.pkl              
+│   ├── answer_vocab.pkl       
+│   └── qa_dataset.csv
+├── demo-material/
+│   ├── qa-lstm-demo-app1.png
+│   ├── qa-lstm-demo-app2.png
+│   ├── qa-lstm-demo-app3.png
+│   ├── qa-lstm-demo-app4.png
+│   └── qa-lstm-demo-app5.png 
 └── static/
     ├── index.html
     ├── style.css
